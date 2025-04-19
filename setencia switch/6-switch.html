@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura de Control - Setencia switch - JavaScript</title>
+
+  <script type="text/javascript">
+
+    function especie (){
+
+      //var tipo=cespe.value; //Forma alternativa de obtener el valor del input(no funciona en todos los navegadores)
+      var tipo=document.getElementsByName("cespe")[0].value;
+
+      switch(tipo){
+        case "humano": alert("Eres un humano"); break;
+        case "planta": alert ("Eres una planta"); break;
+        case "animal": alert ("Eres un animal"); break;
+        default: alert("Especie desconocida"); break;
+      }
+    }
+
+  </script>
+</head>
+<body>
+  Especie: <input type="text" name="cespe" size="20" onblur="especie()"/>
+</body>
+</html>

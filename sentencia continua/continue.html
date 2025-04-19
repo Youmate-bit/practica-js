@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura de control - setencia continue - JavaScript</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+    var cont =1;
+
+    document.write("<h3> Ejemplo de continue en un while </h3><br>");
+
+    while (cont<10){
+      document.write(" cont es: "+ cont);
+
+      if(cont==5){
+        cont=11;
+        continue;
+      }
+
+    document.write(" &nbsp; esto no se ejecuta cuando el contador llegue a 5 <br>");
+    cont++;
+    }
+
+    document.write("<br><br><h3> Ejemplo de continue en un for </h3>");
+
+    for(var cont=0; cont<=10;cont++){
+      document.write("este es el contador: "+cont+"<br>");
+      continue;
+      document.write("esto no se ejecuta <br>");
+      document.write("todo lo que esta debajo del continiue no se ejecuta<br>");
+
+    }
+
+  </script>
+  
+</body>
+</html>

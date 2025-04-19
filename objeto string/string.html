@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objeto String-JavaScript</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+    var mi_string = new String("Metodos");
+    //document.write(mi_string.anchor("newAnchor"));
+
+    document.write("mi_string: " + mi_string + "<br>");
+    document.write("<p> big()=" + mi_string.big() + "</p>");
+    //document.write("<p> blink()="+mi_string.blink()+"</p>");
+    document.write("<br> charAT(5)=" + mi_string.charAt(5));
+
+    var string1 = new String("Hola como");
+    var string2 = new String(" estas");
+
+    document.write("<b>Texto concatenado:</b> " + string1.concat(string2) + "<br>");
+
+    document.write("<b>Texto en color azul:</b> " + string1.fontcolor("blue") + "<br>");
+    document.write("<b>Texto en con fontsize(5):</b> " + string1.fontsize(5) + "<br>");
+    document.write("<b>Texto en con fontsize(5):<b/> " + string1.concat(string2).fontsize(5) + "<br>");
+
+    var cadena = new String("ciens ucv.ve");
+    document.write("<b><br> funcion indexOF(5):</b> " + cadena.indexOf("c"));
+    document.write("<b><br> funcion indexOF(5):</b> " + cadena.indexOf("ucv"));
+    document.write("<b><br>funcion indexOF(5)<b/> " + cadena.indexOf("UCV"));
+
+    document.write("<b><br>funion italics:</b> " + cadena.italics() + "<br>");
+
+    var texto = new String("javascript nivel basico");
+    //arranca desde el indice 0. Es la posicion 20
+    document.write("<b> texto.lastIndexOF(cadena buscada, indice):</b> " + texto.lastIndexOf("i") + "<br>");
+
+    var palabra = new String("Ir Facultad de Ciencias - UCV");
+
+    document.write("<b> Link es: </b> " + palabra.link("https://www.ciens.ucv.ve") + "<br><br>");
+
+    var frase = "Son tres mil trescientos treinta y tres con nueve";
+    document.write("<b> Texto inicial: </b>" + frase + "<br>");
+    //reemplazamos el valor e la primera ocurrencia encontrada. El resto no se reemplaza.
+    frase = frase.replace("tres", "dos");
+    document.write("<b> Texto con reemplazos: </b>" + frase + "<br>");
+
+    var frase = "Son tres mil trescientos treinta y tres con nueve";
+    document.write("<b> Texto inicial 02: </b>" + frase + "<br>");
+    frase = frase.replace(/[aiou]/gi, "e");
+    document.write("<b> Texto con reemplazos 02: </b>" + frase + "<br>");
+
+    var cadena03 = "buscar 1 buscar 2 bus";
+    cadena03 = cadena03.replace(/buscar/g, "reemplazar");
+    document.write("<b> Texto inicial 03: </b>" + cadena03 + "<br>");
+
+    var cadena04 = "buscar3 BUSCAR4 bus";
+    //para hacer un Replace ALL sensible a mayusculas y minusculas
+    cadena04 = cadena04.replace(/buscar/gi, "reemplazar");
+    document.write("<b> Texto inicial 04: </b>" + cadena04 + "<br>");
+
+  </script>
+
+</body>
+
+</html>
